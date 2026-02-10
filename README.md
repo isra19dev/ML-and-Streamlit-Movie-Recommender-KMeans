@@ -1,16 +1,16 @@
-#  Sistema de Recomendación de Películas - Netflix
+#  Movie Recommendation System
 
-Sistema inteligente de recomendación de películas basado en **K-Means clustering** del dataset MovieLens 100K. Agrupa usuarios en 3 perfiles y genera recomendaciones personalizadas.
+Intelligent movie recommendation system based on K-Means clustering using the MovieLens 100K dataset. It groups users into 3 profiles and generates personalized recommendations.
 
-##  Características
+##  Features
 
--  **K-Means Clustering**: Segmenta 943 usuarios en 3 grupos
--  **25 Features por usuario**: Edad, rating promedio, películas vistas, preferencias por género
--  **Recomendaciones personalizadas**: Basadas en similitud con usuarios del mismo cluster
--  **Interfaz Streamlit**: App interactiva y amigable
--  **5 Visualizaciones** de análisis por cluster
+-  **K-Means Clustering**: Segments 943 users into 3 groups
+-  **25 Features per user**: Age, average rating, movies watched, genre preferences
+-  **Personalized recommendations**: Based on similarity with users from the same cluster
+-  **Streamlit Interface**: Interactive and user-friendly app
+-  **5 Cluster** analysis visualizations
 
-##  Requisitos
+##  Requirements
 
 ```bash
 python >= 3.8
@@ -23,73 +23,43 @@ streamlit
 joblib
 ```
 
-Instalar todo:
+Install all dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-##  Cómo Usar
+##  3 Clusters
 
-### 1. Preparar datos (primera vez)
-```bash
-cd PYTHON
-python 01_carga_limpieza_datos.py
-```
-→ Genera CSVs limpios en `DATA/`
-
-### 2. Entrenar modelo
-```bash
-python main.py
-```
-→ Entrena K-Means, guarda modelos, genera gráficas
-
-### 3. Ejecutar app web
-```bash
-streamlit run app_streamlit.py
-```
-→ Abre http://localhost:8501
-
-### 4. Validar sistema (test)
-```bash
-python validar_sistema.py
-```
-→ Prueba con 3 perfiles de usuario
-
-
-##  Los 3 Clusters
-
-| Cluster | Nombre | Usuarios | Movies Media | Rating Medio | Perfil |
+| Cluster | Name | Users | Avg. Movies | Avg. Rating | Profile |
 |---------|--------|----------|--------------|--------------|--------|
-| 0 | Selectivos | 312 | 43 | 3.81 | Ven pocas películas pero les dan buenas puntuaciones |
-| 1 | Críticos Activos | 258 | 90 | 3.08 | Super activos, pruebas de todo |
-| 2 | Cinéfilos | 373 | 170 | 3.75 | Maratonianos, muchas películas, buen rating |
+| 0 | Selective Users | 312 | 43 | 3.81 | Watch few movies but give high ratings |
+| 1 | Active Critics | 258 | 90 | 3.08 | Very active, try everything |
+| 2 | Cinephiles | 373 | 170 | 3.75 | Binge-watchers, many movies, good ratings |
 
-##  Tecnologías
+##  Technologies
 
-- **Python 3.8+**
+- **Python**
 - **scikit-learn**: K-Means clustering
-- **pandas**: Manipulación de datos
-- **Streamlit**: Interfaz web
-- **Matplotlib/Seaborn**: Visualizaciones
-- **joblib**: Persistencia de modelos
+- **pandas**: Data manipulation
+- **Streamlit**: Web interface
+- **Matplotlib/Seaborn**: Visualizations
+- **joblib**: Model persistence
 
 ##  Dataset
 
 [MovieLens 100K](https://grouplens.org/datasets/movielens/100k/)
-- 943 usuarios
-- 1,682 películas
+- 943 users
+- 1,682 movies
 - 100,000 ratings
-- Años: 1997-1998
+- Years: 1997-1998
 
-##  Notas
+##  Notes
 
-- El modelo K-Means se entrena 1 sola vez en `main.py`
-- Se persiste con `joblib` para carga rápida
-- La app usa búsqueda de usuarios similares para mayor personalización
-- Las recomendaciones son dinámicas según edad, película y ratings
+- The K-Means model is trained only once in `main.py`
+- The trained model is persisted using `joblib` for fast loading
+- The app uses similar user search for improved personalization
+- Recommendations are dynamic based on age, movies, and ratings
 
 ## 👨 Autor
 
-Israel Rodriguez Gonzalez
-
-**Para comenzar:** `streamlit run PYTHON/app_streamlit.py`
+isra19dev
