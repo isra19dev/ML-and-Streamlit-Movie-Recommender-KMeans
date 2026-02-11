@@ -1,6 +1,4 @@
-# Ignorar archivos grandes y temporales
-*.pkl
-*.joblib
+# Ignorar archivos temporales
 __pycache__/
 *.pyc
 *.pyo
@@ -8,9 +6,6 @@ __pycache__/
 .env
 venv/
 env/
-
-# Opcional: Ignorar CSVs raw (mantener solo los procesados)
-# DATA/raw/
 
 # Streamlit
 .streamlit/
