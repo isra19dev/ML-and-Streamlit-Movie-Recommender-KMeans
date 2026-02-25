@@ -60,6 +60,6 @@ pip install -r requirements.txt
 - The app uses similar user search for improved personalization
 - Recommendations are dynamic based on age, movies, and ratings
 
-## 👨 Autor
+## Autor
 
 isra19dev
